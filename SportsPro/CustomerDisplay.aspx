@@ -43,6 +43,10 @@
                 Sports management software for the sports enthusiast</p>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString %>" SelectCommand="SELECT [CustomerID], [Name], [Address], [City], [State], [ZipCode], [Phone], [Email] FROM [Customers] ORDER BY [Name]"></asp:SqlDataSource>
             <br />
+            <hr />
+            Navigate to 
+            <asp:HyperLink ID="HyperLinkCustomers" runat="server" NavigateUrl="~/IncidentPage.aspx">Incidents Page</asp:HyperLink>
+            <hr />
             <br />
             Select a Customer: <asp:DropDownList ID="CustomerDDL" runat="server" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="CustomerID" AutoPostBack="True">
             </asp:DropDownList>
